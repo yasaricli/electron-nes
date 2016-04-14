@@ -1,4 +1,9 @@
-![Screen Shot](https://raw.githubusercontent.com/yasaricli/electron-nes/develop/assets/img/screenshot.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yasaricli/electron-nes/develop/assets/img/screenshot.png">
+  <br />
+  JavaScript NES emulator for electronjs.
+</p>
+
 
 # Development
 

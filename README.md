@@ -1,5 +1,3 @@
-# Nes Emulator
-
 ![Nes Logo](https://raw.githubusercontent.com/yasaricli/electron-nes/master/assets/img/icon.png)
 
 # Development

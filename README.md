@@ -10,13 +10,13 @@ $ cd electron-nes
 $ npm install
 ```
 
-## Bower packages install 
+### Bower packages install 
 ```bash
 $ cd assets
 $ bower install
 ```
 
-## Less watch
+### Less watch
 ```bash
 $ gulp watch
 ```
@@ -26,7 +26,7 @@ $ gulp watch
 $ npm start
 ```
 
-## Build
+### Build
 ```bash
 $ electron-packager . Nes --platform=darwin --arch=x64 --version=0.36.9 --icon=assets/img/icon.icns
 ```

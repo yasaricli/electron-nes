@@ -15,10 +15,8 @@ let mainWindow;
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    maxWidth: 800,
-    maxHeight: 500,
-    minWidth: 800,
-    minHeight: 500,
+    width: 500,
+    height: 500,
     center: true
   });
 
@@ -27,6 +25,9 @@ function createWindow () {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+  // Window resizable false.
+  mainWindow.setResizable(false);
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {

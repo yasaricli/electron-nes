@@ -1,0 +1,21 @@
+{
+  "name": "Nes",
+  "homepage": "https://github.com/yasaricli/electron-nes",
+  "authors": [
+    "Yasar icli <hello@yasaricli.com>"
+  ],
+  "description": "Nes emulator for electron",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "blaze": "^0.0.3"
+  }
+}

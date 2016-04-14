@@ -21,6 +21,9 @@ body {
 #Surface .emulator {
   text-align: center;
 }
+#Surface .emulator canvas {
+  margin: 50px;
+}
 #Surface .emulator #file {
   display: none;
 }

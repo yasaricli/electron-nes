@@ -5113,6 +5113,5 @@ CFxNES$$module$lib$src$CFxNES.setLogLevel = function(a) {
   module$core$src$utils$logger.default.setLevel(logLevelAliases$$module$lib$src$CFxNES[a] || module$core$src$utils$logger.LogLevel.WARN);
 };
 
-// EXPORT
 this.Emulator = CFxNES$$module$lib$src$CFxNES;
 }).call(this);

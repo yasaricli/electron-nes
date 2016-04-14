@@ -2,11 +2,9 @@ Template.main.onRendered(function() {});
 
 Template.emulator.onRendered(function() {
   this.emulator = new Emulator({
-    scale: 10
+    videoOutput: this.find("#Game"),
+    speed: 0.75
   });
-
-  // OUTPUT VIDEO
-  this.emulator.setVideoOutput(this.find("#Emulator"));
 });
 
 // RENDER MAIN TEMPLATE

@@ -1,4 +1,4 @@
-![Nes Logo](https://raw.githubusercontent.com/yasaricli/electron-nes/master/assets/img/icon.png)
+![Screen Shot](https://raw.githubusercontent.com/yasaricli/electron-nes/develop/assets/img/screenshot.png)
 
 # Development
 

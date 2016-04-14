@@ -1,6 +1,6 @@
 {
   "name": "Nes",
-  "version": "0.0.1",
+  "version": "0.0.1_1",
   "description": "Electron Nes emulator",
   "main": "main.js",
   "scripts": {

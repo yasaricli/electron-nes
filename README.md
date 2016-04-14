@@ -1,5 +1,6 @@
 # Nes Emulator
-Electron Nes emulator.
+
+![Nes Logo](https://raw.githubusercontent.com/yasaricli/electron-nes/master/assets/img/icon.png)
 
 ## Quick Start
 

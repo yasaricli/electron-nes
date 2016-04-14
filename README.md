@@ -14,3 +14,8 @@ $ npm start
 ```bash
 $ gulp watch
 ```
+
+## Build app in OSX
+```bash
+$ electron-packager . --platform=darwin --arch=x64 --version=0.36.9 --icon=assets/img/icon.icns
+```

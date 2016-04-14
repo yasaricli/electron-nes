@@ -28,5 +28,5 @@ $ npm start
 
 ### Build
 ```bash
-$ electron-packager . Nes --platform=darwin --arch=x64 --version=0.36.9 --icon=assets/img/icon.icns
+$ electron-packager . --platform=darwin --arch=x64 --version=0.36.12 --icon=assets/img/icon.icns --ignore=node_modules
 ```

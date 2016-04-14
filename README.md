@@ -21,6 +21,11 @@ $ bower install
 $ gulp watch
 ```
 
+## Start application
+```bash
+$ npm start
+```
+
 ## Build
 ```bash
 $ electron-packager . Nes --platform=darwin --arch=x64 --version=0.36.9 --icon=assets/img/icon.icns

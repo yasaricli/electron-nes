@@ -2,21 +2,28 @@
 
 ![Nes Logo](https://raw.githubusercontent.com/yasaricli/electron-nes/master/assets/img/icon.png)
 
-## Quick Start
+# Development
+
+## Clone and Npm packages install
 
 ```bash
 $ git clone https://github.com/yasaricli/electron-nes.git
 $ cd electron-nes
 $ npm install
-$ npm start
 ```
 
-## Watch less styles
+## Bower packages install 
+```bash
+$ cd assets
+$ bower install
+```
+
+## Less watch
 ```bash
 $ gulp watch
 ```
 
-## Build app in OSX
+## Build
 ```bash
-$ electron-packager . --platform=darwin --arch=x64 --version=0.36.9 --icon=assets/img/icon.icns
+$ electron-packager . Nes --platform=darwin --arch=x64 --version=0.36.9 --icon=assets/img/icon.icns
 ```

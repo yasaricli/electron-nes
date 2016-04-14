@@ -15,13 +15,14 @@ let mainWindow;
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    title: 'Nes Emulator',
     width: 500,
     height: 500,
     center: true
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

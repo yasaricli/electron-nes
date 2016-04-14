@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Munro';
+  src: url('../fonts/munro.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MunroSmall';
+  src: url('../fonts/munro_small.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MunroNarrow';
+  src: url('../fonts/munro_narrow.ttf') format('truetype');
+}
+body {
+  font-family: 'Munro';
+  font-size: 17px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #000;
+  color: #fff;
+}
+#Surface .emulator {
+  text-align: center;
+}
+#Surface .emulator #file {
+  display: none;
+}
+#Surface .btn {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: 'MunroSmall';
+  font-size: 30px;
+  background-color: #333;
+  border: 0px;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+  margin: auto;
+}
+#Surface .btn:hover {
+  background-color: #2d2c2c;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nes Emulator</title>
+
+    <!-- STYLES -->
+    <link href="assets/css/nes.css" rel="stylesheet">
+
+    <!-- LIBS -->
+    <script src="assets/bower_components/blaze/target/blaze.min.js"></script>
+    <script src="assets/js/lib/cfxnes.js"></script>
+  </head>
+  <body>
+    <div id="Surface"></div>
+
+    <!-- TEMPLATES START -->
+    <script type='text/spacebars' name="main">
+      {{ > emulator }}
+    </script>
+
+    <script type='text/spacebars' name="emulator">
+      <div class="emulator">
+        <canvas id="Emulator"></canvas>
+        <input type="file" id="file">
+        <button class="btn">Upload and Play</button>
+      </div>
+    </script>
+    <!-- TEMPLATES END -->
+
+    <script type="text/javascript">
+
+      // Compile all Templates
+      Blaze.compileTemplates();
+    </script>
+
+    <!-- COMPONENTS -->
+    <script src="assets/js/events.js"></script>
+    <script src="assets/js/helpers.js"></script>
+    <script src="assets/js/rendered.js"></script>
+  </body>
+</html>

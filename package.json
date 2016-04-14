@@ -1,0 +1,15 @@
+{
+  "name": "Nes",
+  "version": "1.0.0",
+  "description": "Electron Nes emulator",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.0",
+    "gulp-less": "^3.0.5",
+    "gulp-watch": "^4.3.5",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0"
+  }
+}

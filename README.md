@@ -40,4 +40,4 @@ $ electron-packager . --platform=darwin --arch=x64 --version=0.36.12 --icon=asse
 ```
 
 ### THANKS
-JavaScript NES emulator and emulation library [@cfxnes](https://github.com/jpikl/cfxnes)
+JavaScript NES emulator and emulation library [@jpikl](https://github.com/jpikl) - [cfxnes](https://github.com/jpikl/cfxnes)

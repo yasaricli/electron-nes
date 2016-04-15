@@ -36,5 +36,5 @@ $ npm start
 
 ### Build
 ```bash
-$ electron-packager . --platform=darwin --arch=x64 --version=0.36.12 --icon=assets/img/icon.icns --ignore=node_modules
+$ electron-packager . --platform=darwin --arch=x64 --version=0.36.12 --icon=assets/img/icons/icon.icns --ignore=node_modules
 ```

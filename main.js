@@ -18,7 +18,8 @@ function createWindow () {
     title: 'Nes Emulator',
     width: 500,
     height: 500,
-    center: true
+    center: true,
+    icon: 'assets/img/icons/icon.png'
   });
 
   // and load the index.html of the app.

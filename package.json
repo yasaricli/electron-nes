@@ -1,5 +1,5 @@
 {
-  "name": "Nes",
+  "name": "nes",
   "version": "0.0.1",
   "description": "Electron Nes emulator",
   "main": "main.js",

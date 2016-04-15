@@ -2,17 +2,32 @@
 
 const electron = require('electron');
 
+const Menu = require('menu');
+
 // Module to control application life.
 const app = electron.app;
+
+// Underscore
+const _ = require('underscore');
 
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
+// MENU TEMPLATES
+const darwinTemplate = require('./menus/darwin-menu.js');
+const otherTemplate = require('./menus/other-menu.js');
+
+// IS DARWIN
+const isDarwin = _.isEqual(process.platform, 'darwin');
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
+let menu;
 
 function createWindow () {
+  const menuTemplate = isDarwin ? darwinTemplate : otherTemplate;
+
   // Create the browser window.
   mainWindow = new BrowserWindow({
     title: 'Nes Emulator',
@@ -26,7 +41,7 @@ function createWindow () {
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Window resizable false.
   mainWindow.setResizable(false);
@@ -38,6 +53,16 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
+  const menu = Menu.buildFromTemplate(menuTemplate(app, mainWindow));
+
+  // darwinTemplate
+  if (isDarwin) {
+    return Menu.setApplicationMenu(menu);
+  }
+
+  // otherTemplate
+  mainWindow.setMenu(menu);
 }
 
 // This method will be called when Electron has finished

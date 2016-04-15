@@ -7,5 +7,5 @@ Template.emulator.onRendered(function() {
   });
 });
 
-// RENDER MAIN TEMPLATE
+// RENDER MAIN TEMPLATES
 Blaze.render(Template.main, document.getElementById('Surface'));

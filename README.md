@@ -1,3 +1,7 @@
+# Nes Emulator
+
+> Emulator of NES written in javascript for electron.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/yasaricli/electron-nes/713fa3eb0013e7e440125dc2e0bc583435b54c70/assets/img/icon.png">
 </p>

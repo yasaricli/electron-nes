@@ -38,3 +38,6 @@ $ npm start
 ```bash
 $ electron-packager . --platform=darwin --arch=x64 --version=0.36.12 --icon=assets/img/icons/icon.icns --ignore=node_modules
 ```
+
+### THANKS
+JavaScript NES emulator and emulation library [@cfxnes](https://github.com/jpikl/cfxnes)

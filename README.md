@@ -3,7 +3,7 @@
 > NES emulator written in javascript. Its applicable to all systems; such as windows,linux, macos.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yasaricli/electron-nes/713fa3eb0013e7e440125dc2e0bc583435b54c70/assets/img/icon.png">
+  <img src="https://raw.githubusercontent.com/yasaricli/electron-nes/develop/assets/img/screen.gif">
 </p>
 
 

@@ -20,7 +20,7 @@ module.exports = (mainWindow) => {
         {
           label: 'Version',
           click(item, focusedWindow) {
-            focusedWindow.webContents.send('getVersion', pack);
+            focusedWindow.webContents.send('version', pack);
           }
         },
         {

@@ -36,8 +36,13 @@ $ npm start
 
 ### Build
 ```bash
-$ electron-packager . --platform=darwin --arch=x64 --version=0.36.12 --icon=assets/img/icons/icon.icns --ignore=node_modules
+$ electron-packager . --platform=<platform> --arch=all --version=0.36.12 --icon=assets/img/icons/icon.icns --ignore=node_modules
 ```
+
+#### Required options
+
+platform           all, or one or more of: darwin, linux, mas, win32 (comma-delimited if multiple)
+arch               all, ia32, x64
 
 ### THANKS
 JavaScript NES emulator and emulation library [@jpikl](https://github.com/jpikl) - [cfxnes](https://github.com/jpikl/cfxnes)

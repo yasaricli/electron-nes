@@ -41,8 +41,8 @@ $ electron-packager . --platform=<platform> --arch=all --version=0.36.12 --icon=
 
 #### Required options
 
-platform           all, or one or more of: darwin, linux, mas, win32 (comma-delimited if multiple)
-arch               all, ia32, x64
+* **platform**           all, or one or more of: darwin, linux, mas, win32 (comma-delimited if multiple)
+* **arch**               all, ia32, x64
 
 ### THANKS
 JavaScript NES emulator and emulation library [@jpikl](https://github.com/jpikl) - [cfxnes](https://github.com/jpikl/cfxnes)

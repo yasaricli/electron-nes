@@ -6,6 +6,19 @@
   <img src="https://raw.githubusercontent.com/yasaricli/electron-nes/develop/assets/img/screen.gif">
 </p>
 
+# Installation
+
+## Mac OS X
+
+[**Download**](https://github.com/yasaricli/electron-nes/releases/tag/0.0.2), unzip, and move `nes.app` to the `/Applications` directory.
+
+## Windows
+
+[**Download**](https://github.com/yasaricli/electron-nes/releases/tag/0.0.2) and unzip to some location.
+
+### Linux
+
+[**Download**](https://github.com/yasaricli/electron-nes/releases/tag/0.0.2) and unzip to some location.
 
 # Development
 After repo is cloned,install bower packages and run Gulp from within CSS. 

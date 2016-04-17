@@ -1,6 +1,6 @@
-const { ipcRenderer, dialog }  = require('electron');
+const electron = require('electron');
 
 // IPC ELECTRON ON EVENTS
-ipcRenderer.on('version', function(sender, data) {
+electron.ipcRenderer.on('version', function(sender, data) {
   alert(data.version);
 });

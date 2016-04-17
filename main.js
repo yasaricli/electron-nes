@@ -7,9 +7,6 @@ const Menu = require('menu');
 // Module to control application life.
 const app = electron.app;
 
-// Underscore
-const _ = require('underscore');
-
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
@@ -18,7 +15,7 @@ const darwinTemplate = require('./menus/darwin-menu.js');
 const otherTemplate = require('./menus/other-menu.js');
 
 // IS DARWIN
-const isDarwin = _.isEqual(process.platform, 'darwin');
+const isDarwin = process.platform === 'darwin';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -41,7 +38,7 @@ function createWindow () {
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   // Window resizable false.
   mainWindow.setResizable(false);

@@ -31,8 +31,8 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     title: 'Nes Emulator',
-    width: 500,
-    height: 500,
+    width: 600,
+    height: 600,
     center: true,
     icon: 'assets/img/icons/icon.png'
   });

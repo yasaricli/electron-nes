@@ -23,7 +23,37 @@
       <div class="emulator">
         <canvas id="Game"></canvas>
         <input type="file" id="file">
-        <button class="btn">Open ROM</button>
+      </div>
+
+      {{# if instance.emulator.isRunning }}
+        <button class="btn fps"> FPS - {{ instance.emulator.getFPSFix 1 }}</button>
+        <button class="btn sound">
+          {{# if instance.emulator.isAudioEnabled }}
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
+          {{ else }}
+            <i class="fa fa-volume-off" aria-hidden="true"></i>
+          {{/if}}
+        </button>
+      {{/if}}
+
+      <div class="buttons">
+        {{# if instance.emulator.cartridgeManager.isCartridgeInserted }}
+          {{# if instance.emulator.isRunning }}
+            <button class="btn pause">
+              <i class="fa fa-pause" aria-hidden="true"></i> PAUSE
+            </button>
+          {{ else }}
+            <button class="btn play">
+              <i class="fa fa-play" aria-hidden="true"></i> RUN
+            </button>
+          {{/if}}
+          <button class="btn reset">
+            <i class="fa fa-refresh" aria-hidden="true"></i> SOFT RESET
+          </button>
+        {{/if}}
+        <button class="btn open">
+          <i class="fa fa-folder-open" aria-hidden="true"></i> OPEN ROM
+        </button>
       </div>
     </script>
     <!-- TEMPLATES END -->

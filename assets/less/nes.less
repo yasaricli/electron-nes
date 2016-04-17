@@ -1,4 +1,5 @@
 @import './fonts.less';
+@import '../bower_components/font-awesome/less/font-awesome';
 
 body {
   font-family: 'Munro';
@@ -10,34 +11,61 @@ body {
 }
 
 #Surface {
-
   .emulator {
+    position: absolute;
+    width: 100%;
     text-align: center;
 
-    canvas {
-      margin: 50px;
+    #Game {
+      display: block;
+      margin: 50px auto;
     }
 
     #file {
-      display: none;
+      visibility:hidden
     }
   }
 
-  .btn {
-    display: block;
-    color:white;
-    text-align:center;
-    font-family: 'MunroSmall';
-    font-size: 30px;
-    background-color: #333;
-    border: 0px;
-    cursor: pointer;
-    padding: 10px;
-    outline: none;
-    margin: auto;
+  .buttons {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
 
-    &:hover {
-      background-color: #2d2c2c;
+    .btn {
+      display: inline-block;
     }
+  }
+
+  .fps {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    font-size: 15px;
+  }
+
+  .sound {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 5px;
+  }
+}
+
+.btn {
+  display: block;
+  color:white;
+  text-align:center;
+  font-family: 'MunroSmall';
+  font-size: 30px;
+  background-color: #333;
+  border: 0px;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  outline: none;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #2d2c2c;
   }
 }

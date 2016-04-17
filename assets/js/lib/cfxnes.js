@@ -1,5 +1,8 @@
 (function(){// Input 0
 var $jscomp = {scope:{}, global:this}, Symbol=this.Symbol;
+var _dep = new Tracker.Dependency();
+
+
 $jscomp.initSymbol = function() {
   $jscomp.global.Symbol || (Symbol = $jscomp.Symbol);
   $jscomp.initSymbol = function() {
@@ -253,12 +256,15 @@ NES$$module$core$src$NES.prototype.insertCartridge = function(a) {
   this.cpuMemory.connectMapper(this.mapper);
   this.ppuMemory.connectMapper(this.mapper);
   this.pressPower();
+  return _dep.changed();
 };
 NES$$module$core$src$NES.prototype.isCartridgeInserted = function() {
+  _dep.depend();
   return null != this.cartridge;
 };
 NES$$module$core$src$NES.prototype.removeCartridge = function() {
   this.cartridge = null;
+  return _dep.changed();
 };
 NES$$module$core$src$NES.prototype.loadCartridgeData = function(a) {
   return this.mapper ? Promise.all([this.mapper.loadPRGRAM(a), this.mapper.loadCHRRAM(a)]) : Promise.resolve();
@@ -4252,6 +4258,7 @@ ExecutionManager$$module$lib$src$managers$ExecutionManager.prototype.updateFPS =
   this.fpsBuffer[this.fpsIndex] = 1E3 / (a - this.fpsTime);
   this.fpsIndex = (this.fpsIndex + 1) % this.fpsBuffer.length;
   this.fpsTime = a;
+  return _dep.changed();
 };
 ExecutionManager$$module$lib$src$managers$ExecutionManager.prototype.getFPS = function() {
   return this.fpsBuffer.reduce(function(a, b) {
@@ -4259,6 +4266,7 @@ ExecutionManager$$module$lib$src$managers$ExecutionManager.prototype.getFPS = fu
   }) / this.fpsBuffer.length;
 };
 ExecutionManager$$module$lib$src$managers$ExecutionManager.prototype.getTargetFPS = function() {
+  _dep.depend();
   return module$core$src$common$Region.default.getParams(this.nes.getRegion()).framesPerSecond;
 };
 ExecutionManager$$module$lib$src$managers$ExecutionManager.prototype.readConfiguration = function(a) {
@@ -4915,17 +4923,22 @@ CFxNES$$module$lib$src$CFxNES.prototype.setExecutionDefaults = function() {
 };
 CFxNES$$module$lib$src$CFxNES.prototype.step = function() {
   this.executionManager.step();
+  return _dep.changed();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.start = function() {
   this.executionManager.start();
+  return _dep.changed();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.stop = function() {
   this.executionManager.stop();
+  return _dep.changed();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.restart = function() {
   this.executionManager.restart();
+  return _dep.changed();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.isRunning = function() {
+  _dep.depend();
   return this.executionManager.isRunning();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.hardReset = function() {
@@ -4935,8 +4948,13 @@ CFxNES$$module$lib$src$CFxNES.prototype.softReset = function() {
   this.executionManager.softReset();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.getFPS = function() {
-  return this.executionManager.getFPS();
+  _dep.depend();
+  return this.executionManager.getFPS()
 };
+CFxNES$$module$lib$src$CFxNES.prototype.getFPSFix = function(fix) {
+  _dep.depend();
+  return this.getFPS().toFixed(fix);
+}
 CFxNES$$module$lib$src$CFxNES.prototype.setRegion = function(a) {
   this.executionManager.setRegion(a);
 };
@@ -4962,6 +4980,7 @@ CFxNES$$module$lib$src$CFxNES.prototype.removeCartridge = function() {
   return this.cartridgeManager.removeCartridge();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.isCartridgeInserted = function() {
+  _dep.depend();
   return this.cartridgeManager.isCartridgeInserted();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.setVideoDefaults = function() {
@@ -5023,14 +5042,18 @@ CFxNES$$module$lib$src$CFxNES.prototype.isAudioSupported = function() {
 };
 CFxNES$$module$lib$src$CFxNES.prototype.setAudioEnabled = function(a) {
   this.audioManager.setEnabled(a);
+  return _dep.changed();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.isAudioEnabled = function() {
+  _dep.depend();
   return this.audioManager.isEnabled();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.setAudioVolume = function(a) {
   this.audioManager.setVolume(a);
+  return _dep.changed();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.getAudioVolume = function() {
+  _dep.depend();
   return this.audioManager.getVolume();
 };
 CFxNES$$module$lib$src$CFxNES.prototype.setAudioChannelEnabled = function(a, b) {

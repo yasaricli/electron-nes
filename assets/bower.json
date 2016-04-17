@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "blaze": "^0.0.3"
+    "blaze": "^0.0.3",
+    "font-awesome": "^4.6.1"
   }
 }
